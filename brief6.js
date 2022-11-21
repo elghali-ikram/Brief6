@@ -9,7 +9,6 @@ var club =document.getElementsByName('club');
 
 
 form.addEventListener('submit', (event)=>{
-    
     validateForm();
     console.log(isFormValid());
     if(isFormValid()==true){
@@ -31,8 +30,8 @@ function isFormValid(){
     return result;
 }
 
+
 function validateForm() {
-    //USERNAME
     if(nom.value.match(/[a-zA-Z]{3,30}/g)) {
         setSuccessFor(nom);
     } else {
@@ -72,23 +71,31 @@ function validateForm() {
             seterror(group[i],"choisir votre groupe")
         }
     }
+    let count =0;
+
     for(let i =0;i <club.length;i++)
     {
+        
         if(club[i].checked)
+        {   count++;
+
+        }
+        if(count >=1 && count <=3)
         {
             setsucces(club[i])
-            break;
+
         }
         else
         {
-            seterror(club[i], "choisir un club")
+            seterror(club[i], "choisir entre 1 et 3 un club")
+
         }
     }
 }
 
 function seterror(input, message)
 {
-    const parent= (((input.parentElement).parentElement).parentElement).parentElement;
+    const parent= input.closest('.form-control');
     if(parent.classList.contains('form-control-success')){
         parent.classList.remove('form-control-success');
     }
@@ -108,7 +115,7 @@ function setsucces(input)
 }
 
 function setErrorFor(element, errorMessage) {
-    const parent = element.parentElement;
+    const parent = element.closest('.form-control');
     if(parent.classList.contains('form-control-success')){
         parent.classList.remove('form-control-success');
     }

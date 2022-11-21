@@ -7,8 +7,8 @@
 body
 {
     display: grid;
-    grid-template-columns: 50% 50% ;
-     background-image: url(bacc.gif) ;  
+    grid-template: auto/repeat(2,1fr);
+     /* background-image: url(bacc.gif) ;   */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -148,7 +148,7 @@ small
 @media only screen and (max-width: 600px) {
     body {
         display: grid;
-        grid-template-rows: 20% 50% ;  
+        grid-template:repeat(2,1fr)/ auto ;  
         padding: 1%;
         margin: 0;  
     }
