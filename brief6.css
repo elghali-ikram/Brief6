@@ -1,66 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400&display=swap');
-*
-{
+
+* {
     box-sizing: border-box;
     font-family: 'changa';
 }
-body
-{
+
+body {
     display: grid;
-    grid-template: auto/repeat(2,1fr);
-     /* background-image: url(bacc.gif) ;   */
+    grid-template: auto/repeat(2, 1fr);
+    background-image: url(photo/bacc.gif) ;  
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;    
+    background-attachment: fixed;
     padding: 5%;
     margin: 0;
 }
-form
-{
+
+form {
     display: grid;
     align-content: center;
-    grid-template-rows: auto auto ;
+    grid-template-rows: auto auto;
     background-color: aliceblue;
     border-radius: 10px;
-    border-left:5px solid black ;
+    border-left: 5px solid black;
     padding: 20px;
 }
-form input[type="text"] , form select
-{
+
+form input[type="text"],
+form select {
     border: none;
     border-bottom: 1px solid black;
     background-color: aliceblue;
     outline: none;
 }
-.cordonne
-{
+
+.cordonne {
     display: grid;
     grid-template-rows: repeat(5, 40px);
     grid-gap: 10px;
 }
 
-.tous
-{
+.tous {
     display: grid;
     padding: 10px;
     grid-template-rows: auto auto;
 }
-/* .group .club
-{
+
+.form-control {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 10px;
-} */
-.form-control
-{
-    display: grid;
-    grid-template-columns: 100px auto auto;  
-    
+    grid-template-columns: 100px auto auto;
+
 }
 
-form button
-{
+.contain {
+    padding: 5%;
+}
+
+form button {
     background-color: blue;
     color: aliceblue;
     border: none;
@@ -71,91 +68,85 @@ form button
     font-size: 20px;
     margin-top: 10px;
 }
-form button:hover
-{
+
+form button:hover {
     background-color: black;
 }
-.container
-{
+
+h1 {
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.icon {
+    padding: 38px;
+    display: grid;
+    grid-template-columns: repeat(3, 20px);
+    column-gap: 20px;
+}
+
+.contact img {
+    height: 100px;
+}
+
+.contact {
+    background-color: aliceblue;
+    border-radius: 10px;
+    border-right: 5px solid black;
+    padding: 10px;
+}
+
+.container {
     display: grid;
     grid-template-columns: auto 150px;
 
 }
-h1{
-    font-weight: 400;
-    font-size: 40px;
-}
-.icon
-{
-    padding: 38px;
-    display: grid;
-    grid-template-columns: repeat(3,20px);
-    column-gap: 20px;
-}
-.contact img
-{
-    height: 100px;
-}
-.contact
-{
-    background-color: aliceblue;
-    border-radius: 10px;
-    border-right:5px solid black ;
-    padding: 10px;
-}
-.container i
-{
+
+.container i {
     font-size: 20px;
 }
-.error i
-{
+a{
+    color: black;
+}
+
+.error i {
     display: none;
     color: red;
 }
-small
-{
+
+small {
     color: red;
 }
+
 .form-control-success input[type="text"] {
-    border-bottom: 3px solid rgb(13, 245, 32) ;
+    border-bottom: 3px solid rgb(13, 245, 32);
 }
 
 .form-control-error input[type="text"] {
-    border-bottom: 3px solid rgb(244, 42, 42) ;
+    border-bottom: 3px solid rgb(244, 42, 42);
 }
+
 .form-control-error .error i {
     display: block;
 }
-/* .form-control-error , .form-control-success
-{
-    display: grid;
-    grid-template-columns: 100px auto auto;  
-} */
-
-
-
-
-/* page resultat*/
-.resultat
-{
-    background-color: black;
-    color: aliceblue;
-    padding: 10px;
-}
-
-
 
 @media only screen and (max-width: 600px) {
     body {
         display: grid;
-        grid-template:repeat(2,1fr)/ auto ;  
-        padding: 1%;
-        margin: 0;  
+        grid-template: repeat(2, 1fr 2fr)/ auto;
     }
-  }
 
-
-
-
-
-
+}
+/* page resultat*/
+.resultat {
+    width: 100%;
+    text-align: center;
+    margin-left:50% ;
+    background-color: aliceblue;
+    border-radius: 10px;
+    border: 5px solid black;
+    padding: 10px;
+}
+.resultat img {
+    height: 100px;
+}
